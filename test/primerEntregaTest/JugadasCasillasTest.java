@@ -33,4 +33,18 @@ public class JugadasCasillasTest {
 
     }
 
+    @Test
+    public void sinIncrementoDeCapitalDelJugadorAlCaerEnCasillaQuiniSeisPorMasDeDosVeces(){
+
+        Jugador jack = new Jugador();
+        Casilla quiniSeis = new QuiniSeis();
+
+        quiniSeis.accion(jack);
+        quiniSeis.accion(jack);
+        quiniSeis.accion(jack);
+
+        assertTrue(jack.verificarUltimoAumentoDeCapital( SIGUIENTES_PREMIOS_QUINISEIS ));
+
+    }
+
 }
