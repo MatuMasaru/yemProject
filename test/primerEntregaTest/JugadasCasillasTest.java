@@ -16,9 +16,21 @@ public class JugadasCasillasTest {
 
         quiniSeis.accion(steve);
 
-        assertTrue(steve.verificacionCapital( CAPITAL_INICIAL_JUGADOR + PREMIO_INICIAL_QUINISEIS ));
+        assertTrue(steve.verificarUltimoAumentoDeCapital( PRIMER_PREMIO_QUINISEIS ));
 
     }
 
+    @Test
+    public void incrementoDeCapitalDelJugadorEnTreintaMilAlCaerEnCasillaQuiniSeisPorSegundaVez(){
+
+        Jugador alex = new Jugador();
+        Casilla quiniSeis = new QuiniSeis();
+
+        quiniSeis.accion(alex);
+        quiniSeis.accion(alex);
+
+        assertTrue(alex.verificarUltimoAumentoDeCapital( SEGUNDO_PREMIO_QUINISEIS ));
+
+    }
 
 }
