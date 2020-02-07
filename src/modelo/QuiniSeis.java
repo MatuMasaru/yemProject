@@ -1,9 +1,8 @@
 package modelo;
 
-public class QuiniSeis extends Casilla {
+public class QuiniSeis{
 
-    @Override
-    public void accion(Jugador unJugador) {
+    public void premiar(Jugador unJugador) {
 
         unJugador.visitaConPremio();
 
