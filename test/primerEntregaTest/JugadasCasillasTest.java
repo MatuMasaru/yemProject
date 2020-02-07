@@ -9,39 +9,39 @@ import static org.junit.jupiter.api.Assertions.*;
 public class JugadasCasillasTest {
 
     @Test
-    public void incrementoDeCapitalDelJugadorEnCincuentaMilAlCaerEnCasillaQuiniSeisPorPrimeraVez(){
+    public void testIncrementoDeCapitalDelJugadorEnCincuentaMilAlCaerEnCasillaQuiniSeisPorPrimeraVez(){
 
         Jugador steve = new Jugador();
-        Casilla quiniSeis = new QuiniSeis();
+        /*steve entra a una casilla que el controlador sabe como mandarle el mensaje que está en quiniSeis.*/
 
-        quiniSeis.accion(steve);
+        steve.visitaConPremio();
 
         assertTrue(steve.verificarUltimoAumentoDeCapital( PRIMER_PREMIO_QUINISEIS ));
 
     }
 
     @Test
-    public void incrementoDeCapitalDelJugadorEnTreintaMilAlCaerEnCasillaQuiniSeisPorSegundaVez(){
+    public void testIncrementoDeCapitalDelJugadorEnTreintaMilAlCaerEnCasillaQuiniSeisPorSegundaVez(){
 
         Jugador alex = new Jugador();
-        Casilla quiniSeis = new QuiniSeis();
+        /*steve entra a una casilla que el controlador sabe como mandarle el mensaje que está en quiniSeis.*/
 
-        quiniSeis.accion(alex);
-        quiniSeis.accion(alex);
+        alex.visitaConPremio();
+        alex.visitaConPremio();
 
         assertTrue(alex.verificarUltimoAumentoDeCapital( SEGUNDO_PREMIO_QUINISEIS ));
 
     }
 
     @Test
-    public void sinIncrementoDeCapitalDelJugadorAlCaerEnCasillaQuiniSeisPorMasDeDosVeces(){
+    public void testSinIncrementoDeCapitalDelJugadorAlCaerEnCasillaQuiniSeisPorMasDeDosVeces(){
 
         Jugador jack = new Jugador();
-        Casilla quiniSeis = new QuiniSeis();
+        /*steve entra a una casilla que el controlador sabe como mandarle el mensaje que está en quiniSeis.*/
 
-        quiniSeis.accion(jack);
-        quiniSeis.accion(jack);
-        quiniSeis.accion(jack);
+        jack.visitaConPremio();
+        jack.visitaConPremio();
+        jack.visitaConPremio();
 
         assertTrue(jack.verificarUltimoAumentoDeCapital( SIGUIENTES_PREMIOS_QUINISEIS ));
 
