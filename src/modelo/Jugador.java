@@ -20,7 +20,7 @@ public class Jugador {
 
     public Boolean verificarUltimoAumentoDeCapital(Integer unCapitalAComparar){
 
-        return (this.ultimoAumentoCapital.equals(unCapitalAComparar));
+        return this.ultimoAumentoCapital.equals(unCapitalAComparar);
 
     }
 
